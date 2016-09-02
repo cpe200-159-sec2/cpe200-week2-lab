@@ -1,6 +1,4 @@
-/**
- * Implement all the methods for ArrayStack.
- */
+
 public class ArrayStack {
     protected final static int DEFAULT_STORAGE_SIZE = 10;
     protected Object[] storage;
