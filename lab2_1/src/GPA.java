@@ -5,7 +5,7 @@ public class GPA {
     float temp=0 , n=0 ;
     public void addGrade(int credit, float grade) {
         temp += grade*credit ;
-        n += credit ;
+        n += credit  ;
     }
 
 

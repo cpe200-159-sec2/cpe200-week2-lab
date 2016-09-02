@@ -20,9 +20,12 @@ public class ArrayStack {
 
     public void push(Object o)
     {
-        top++ ;
-        storage[top] = o ;
-
+        if(top>storage.length) throw new RuntimeException("Stack overflow");
+        else
+        {
+            top++ ;
+            storage[top] = o ;
+        }
     }
 
     public Object pop()
