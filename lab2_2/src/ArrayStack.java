@@ -13,27 +13,28 @@ public class ArrayStack {
 
     public ArrayStack(int size)
     {
-        if(size <= 0) return;
+        if(0 >= size) return;
         storage = new Object[size];
         top = -1;
     }
 
     public void push(Object o)
     {
-        /* Your code here */
+        if (storage.length <= size()) throw new RuntimeException("Stack overflow");
+        top += 1;
+        storage[top] = o;
     }
 
     public Object pop()
     {
-        if(top == -1) throw new RuntimeException("Stack underflow");
-        top--;
+        if(-1 == top) throw new RuntimeException("Stack underflow");
+        top -= 1;
         return storage[top + 1];
     }
 
     public int size()
     {
-        /* Your code here */
-        return 0;
+        return top + 1;
     }
 
     public static void main(String[] args) {
