@@ -2,14 +2,34 @@
  * Implement grading system.
  */
 public class GPA {
+    private float gpa=0;
+    private float sum=0;
+    private float cr=0;
     public void addGrade(int credit, float grade) {
-        /* Your code here */
+        if(grade==0){
+            System.out.println("Got F for "+credit+" credits class");
+        }else if(grade==1){
+            System.out.println("Got D for "+credit+" credits class");
+        }else if(grade==1.5){
+            System.out.println("Got D+ for "+credit+" credits class");
+        }else if(grade==2){
+            System.out.println("Got C for "+credit+" credits class");
+        }else if(grade==2.5){
+            System.out.println("Got C+ for "+credit+" credits class");
+        }else if(grade==3){
+            System.out.println("Got B for "+credit+" credits class");
+        }else if(grade==3.5){
+            System.out.println("Got B+ for "+credit+" credits class");
+        }else if(grade==4)
+            System.out.println("Got A for "+credit+" credits class");
+        sum+=credit*grade;
+        cr+=credit;
+        gpa=sum/cr;
     }
 
 
     public float get() {
-        /* Your code here */
-        return 0.0f;
+        return gpa;
     }
     public static void main(String[] args) {
         GPA gpa = new GPA();
