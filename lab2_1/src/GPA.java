@@ -1,15 +1,20 @@
+
 /**
  * Implement grading system.
  */
 public class GPA {
+    float sumgrade=0;
+    float sumcra=0;
     public void addGrade(int credit, float grade) {
         /* Your code here */
+        sumgrade+=(grade*credit);
+        sumcra+=credit;
     }
 
 
     public float get() {
-        /* Your code here */
-        return 0.0f;
+        if (sumcra ==0)return 0;
+        else return (sumgrade/sumcra);
     }
     public static void main(String[] args) {
         GPA gpa = new GPA();
