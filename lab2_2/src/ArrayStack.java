@@ -20,6 +20,7 @@ public class ArrayStack {
 
     public void push(Object o)
     {
+        if(top == DEFAULT_STORAGE_SIZE) throw new RuntimeException("Stack underflow");
         top++;
         storage[top]=o;
     }
