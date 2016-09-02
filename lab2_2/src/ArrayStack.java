@@ -34,7 +34,7 @@ public class ArrayStack {
         return storage[top + 1];
     }
 
-    public int size()
+     public int size()
     {
 
         return top+1;
