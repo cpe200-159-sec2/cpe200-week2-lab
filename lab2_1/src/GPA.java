@@ -2,14 +2,28 @@
  * Implement grading system.
  */
 public class GPA {
+    int size=0;
+    float[] Grade =new float[10];
+    int[] Credit=new int[10];
+
     public void addGrade(int credit, float grade) {
-        /* Your code here */
+        Grade[size]=grade;
+        Credit[size]=credit;
+        size++;
     }
 
 
     public float get() {
-        /* Your code here */
-        return 0.0f;
+        float SumGrade=0;
+        int SumCredit=0;
+        for(int i=0;i<size;i++)
+        {
+            SumGrade+=(Grade[i]*Credit[i]);
+            SumCredit+=Credit[i];
+        }
+        float SumGPA=(SumGrade/SumCredit);
+        return SumGPA;
+
     }
     public static void main(String[] args) {
         GPA gpa = new GPA();
