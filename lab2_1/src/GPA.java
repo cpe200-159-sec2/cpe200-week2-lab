@@ -1,12 +1,9 @@
 
-/**
- * Implement grading system.
- */
 public class GPA {
     float sumgrade=0;
     float sumcra=0;
     public void addGrade(int credit, float grade) {
-        /* Your code here */
+
         sumgrade+=(grade*credit);
         sumcra+=credit;
     }
