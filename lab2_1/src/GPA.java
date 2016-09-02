@@ -2,14 +2,17 @@
  * Implement grading system.
  */
 public class GPA {
+    private float avg = 0;
+    private float ag = 0;
     public void addGrade(int credit, float grade) {
-        /* Your code here */
+        avg += credit*grade;
+        ag += credit;
     }
 
-
     public float get() {
-        /* Your code here */
-        return 0.0f;
+        float average = avg/ag;
+        if (average > 0) return average;
+        else return 0;
     }
     public static void main(String[] args) {
         GPA gpa = new GPA();
