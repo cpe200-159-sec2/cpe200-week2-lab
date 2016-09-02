@@ -19,9 +19,10 @@ public class ArrayStack {
     }
 
     public void push(Object o)
-    {
+    {   if(top==DEFAULT_STORAGE_SIZE-1) throw new RuntimeException("Stack underflow");
+        else{
         top++;
-        storage[top]=o;
+        storage[top]=o;}
 
     }
 
