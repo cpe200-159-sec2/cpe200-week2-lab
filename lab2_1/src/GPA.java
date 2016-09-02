@@ -3,10 +3,10 @@
  */
 public class GPA {
 
-    float[] gr = new float[50];
-    float[] cr = new float[50];
-    float g=0,c=0;
-    int n=0;
+    private float[] gr = new float[50];
+    private float[] cr = new float[50];
+    private float g=0,c=0;
+    private int n=0;
     public void addGrade(int credit, float grade) {
             g+=grade*credit;
             c+=credit;
