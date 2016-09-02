@@ -6,42 +6,41 @@ public class ArrayStack {
     protected Object[] storage;
     protected int top;
 
-    public ArrayStack() {
+    public ArrayStack()
+    {
         this(DEFAULT_STORAGE_SIZE);
     }
 
-    public ArrayStack(int size) {
-        if (size <= 0) return;
+    public ArrayStack(int size)
+    {
+        if(size <= 0) return;
         storage = new Object[size];
         top = -1;
     }
 
-    public void push(Object o) {
-        storage[top] = o;
-        top++;
+    public void push(Object o)
+    {
+           storage[++top] = o;
 
-        return;
     }
 
-}
-
-    public Object pop() {
-        if (top == -1) throw new RuntimeException("Stack underflow");
+    public Object pop()
+    {
+        if(top == -1) throw new RuntimeException("Stack underflow");
         top--;
         return storage[top + 1];
     }
 
-    public int size() {
+    public int size()
+    {
 
-        return 0;
-
-        return top + 1;
+        return top+1;
     }
 
     public static void main(String[] args) {
         ArrayStack stack = new ArrayStack();
         try {
-            System.out.printf("Empty pop: %d\n", (Integer) stack.pop());
+            System.out.printf("Empty pop: %d\n", (Integer)stack.pop());
         } catch (Exception ex) {
             System.out.printf("Got exception: %s\n", ex.getMessage());
         }
@@ -49,11 +48,11 @@ public class ArrayStack {
         stack.push(5);
         stack.push(4);
         System.out.printf("Stack size: %d\n", stack.size());
-        System.out.printf("First pop: %d\n", (Integer) stack.pop());
-        System.out.printf("Second pop: %d\n", (Integer) stack.pop());
-        System.out.printf("Third pop: %d\n", (Integer) stack.pop());
+        System.out.printf("First pop: %d\n", (Integer)stack.pop());
+        System.out.printf("Second pop: %d\n", (Integer)stack.pop());
+        System.out.printf("Third pop: %d\n", (Integer)stack.pop());
         try {
-            System.out.printf("Fourth pop: %d\n", (Integer) stack.pop());
+            System.out.printf("Fourth pop: %d\n", (Integer)stack.pop());
         } catch (Exception ex) {
             System.out.printf("Got exception: %s\n", ex.getMessage());
         }
