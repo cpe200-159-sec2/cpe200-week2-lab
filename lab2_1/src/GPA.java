@@ -3,8 +3,11 @@
  */
 public class GPA {
 
+    int[] arrayOfCredits = new int [10];
+    float[] arrayOfGrades = new float [10];
     private int totalCredits;
     private float totalGrades;
+    private int index = 0;
 
     public GPA(){
         totalCredits = 0;
@@ -12,12 +15,18 @@ public class GPA {
     }
 
     public void addGrade(int credit, float grade) {
-        totalCredits += credit;
-        totalGrades += grade*credit;
+        arrayOfCredits[index] = credit;
+        arrayOfGrades[index] = grade;
+        index++;
     }
 
 
     public float get() {
+        for (int i = 0; i <index+1 ; i++) {
+            totalCredits += arrayOfCredits[i];
+            totalGrades += arrayOfGrades[i]*arrayOfCredits[i];
+        }
+
         if (totalCredits!=0) {
             return totalGrades/totalCredits;
         }
