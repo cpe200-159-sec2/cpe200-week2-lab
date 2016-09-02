@@ -8,7 +8,6 @@ public class GPA {
         sumcra+=credit;
     }
 
-
     public float get() {
         if (sumcra ==0)return 0;
         else return (sumgrade/sumcra);
