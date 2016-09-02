@@ -1,15 +1,24 @@
+import java.security.PrivateKey;
+
 /**
  * Implement grading system.
  */
 public class GPA {
+    private float gd=0;
+    private float cre=0;
+    private float sum=0;
+    private float sum1=0;
+
     public void addGrade(int credit, float grade) {
-        /* Your code here */
+        sum=credit*grade;
+       sum1+=sum;
+        cre+=credit;
+        gd=sum1/cre;
+
     }
-
-
     public float get() {
-        /* Your code here */
-        return 0.0f;
+
+        return gd;
     }
     public static void main(String[] args) {
         GPA gpa = new GPA();
