@@ -36,7 +36,6 @@ public class ArrayStack {
 
      public int size()
     {
-
         return top+1;
     }
 
