@@ -20,7 +20,7 @@ public class ArrayStack {
 
     public void push(Object o)
     {
-        /* Your code here */
+
     }
 
     public Object pop()
